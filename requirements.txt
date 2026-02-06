@@ -7,3 +7,6 @@ jupyter
 streamlit
 fastapi
 uvicorn
+kaggle
+imbalanced-learn
+requests
