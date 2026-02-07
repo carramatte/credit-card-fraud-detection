@@ -1,46 +1,80 @@
-# Fraud Detection Project
+# 🛡️ Credit Card Fraud Detection System
 
-This project implements a credit card fraud detection system using Machine Learning (Random Forest). It includes a training pipeline, a REST API (FastAPI), and a Dashboard (Streamlit).
+A complete **Machine Learning** solution for detecting fraudulent credit card transactions in real-time.
 
-## Project Structure
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://fraud-detection-dashboard-ml39.onrender.com)
+[![API](https://img.shields.io/badge/API-FastAPI-009688?style=for-the-badge&logo=fastapi)](https://fraud-detection-api-zchp.onrender.com)
 
-- `api/`: FastAPI application for serving the model.
-- `dashboard/`: Streamlit dashboard for user interaction.
-- `data/`: Directory for datasets (raw and processed).
-- `models/`: Where trained models and scalers are saved.
-- `notebooks/`: Jupyter notebooks for exploration and training.
-- `src/`: Source code for preprocessing and training.
+---
 
-## Setup
+## 🎯 Overview
 
-1. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+This project implements an end-to-end fraud detection pipeline using **Random Forest** classification. It includes data preprocessing, model training, a REST API for predictions, and an interactive dashboard for analysis.
 
-2. **Data:**
-   Ensure `creditcard.csv` is located in `data/raw/`.
+## 🚀 Live Demo
 
-3. **Train Model:**
-   ```bash
-   python src/train.py
-   ```
-   This will save `random_forest_model.pkl` and `scaler.pkl` in `models/`.
+- **Dashboard:** [fraud-detection-dashboard-ml39.onrender.com](https://fraud-detection-dashboard-ml39.onrender.com)
+- **API:** [fraud-detection-api-zchp.onrender.com](https://fraud-detection-api-zchp.onrender.com)
 
-## Usage
+## 🛠️ Tech Stack
 
-### Run API
+| Category | Technologies |
+|----------|-------------|
+| **ML/Data** | Python, Scikit-learn, Pandas, NumPy |
+| **Backend** | FastAPI, Uvicorn |
+| **Frontend** | Streamlit |
+| **Deployment** | Render |
+
+## 📁 Project Structure
+
+```
+fraud_detection/
+├── api/                 # FastAPI REST API
+│   └── main.py
+├── dashboard/           # Streamlit Dashboard
+│   └── app.py
+├── src/                 # Training pipeline
+│   ├── load_data.py
+│   ├── preprocess.py
+│   └── train.py
+├── models/              # Trained models
+├── notebooks/           # Jupyter notebooks
+└── data/                # Datasets
+```
+
+## ⚡ Quick Start
+
+### 1. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Train the model
+```bash
+python src/train.py
+```
+
+### 3. Run the API
 ```bash
 uvicorn api.main:app --reload
 ```
-The API will be available at `http://127.0.0.1:8000`.
 
-### Run Dashboard
+### 4. Run the Dashboard
 ```bash
 streamlit run dashboard/app.py
 ```
-The dashboard will open in your browser.
 
-## API Endpoints
-- `POST /predict`: Accepts a list of transactions and returns predictions.
-- `GET /`: Health check.
+## 📊 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/` | Health check |
+| `POST` | `/predict` | Predict fraud on transactions |
+
+## 📝 License
+
+MIT License
+
+---
+
+Made with ❤️ by [@carramatte](https://github.com/carramatte)
