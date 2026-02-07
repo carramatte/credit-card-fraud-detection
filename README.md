@@ -1,4 +1,4 @@
-# 🛡️ Credit Card Fraud Detection System
+# Credit Card Fraud Detection System
 
 A complete **Machine Learning** solution for detecting fraudulent credit card transactions in real-time.
 
@@ -7,16 +7,16 @@ A complete **Machine Learning** solution for detecting fraudulent credit card tr
 
 ---
 
-## 🎯 Overview
+## Overview
 
 This project implements an end-to-end fraud detection pipeline using **Random Forest** classification. It includes data preprocessing, model training, a REST API for predictions, and an interactive dashboard for analysis.
 
-## 🚀 Live Demo
+## Live Demo
 
 - **Dashboard:** [fraud-detection-dashboard-ml39.onrender.com](https://fraud-detection-dashboard-ml39.onrender.com)
 - **API:** [fraud-detection-api-zchp.onrender.com](https://fraud-detection-api-zchp.onrender.com)
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |----------|-------------|
@@ -25,7 +25,7 @@ This project implements an end-to-end fraud detection pipeline using **Random Fo
 | **Frontend** | Streamlit |
 | **Deployment** | Render |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 fraud_detection/
@@ -42,7 +42,7 @@ fraud_detection/
 └── data/                # Datasets
 ```
 
-## ⚡ Quick Start
+## Quick Start
 
 ### 1. Install dependencies
 ```bash
@@ -64,17 +64,17 @@ uvicorn api.main:app --reload
 streamlit run dashboard/app.py
 ```
 
-## 📊 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `GET` | `/` | Health check |
 | `POST` | `/predict` | Predict fraud on transactions |
 
-## 📝 License
+## License
 
 MIT License
 
 ---
 
-Made with ❤️ by [@carramatte](https://github.com/carramatte)
+Made by [@carramatte](https://github.com/carramatte)

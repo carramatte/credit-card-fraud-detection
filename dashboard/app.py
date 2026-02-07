@@ -5,7 +5,7 @@ import json
 
 st.set_page_config(page_title="Fraud Detection Dashboard", layout="wide")
 
-st.title("🛡️ Credit Card Fraud Detection System")
+st.title("Credit Card Fraud Detection System")
 st.markdown("Upload a CSV file containing transaction data to detect fraudulent activities.")
 
 # Sidebar
@@ -51,7 +51,7 @@ if uploaded_file is not None:
                         st.metric("Fraudulent Transactions Detected", len(fraud_df))
                         
                         if not fraud_df.empty:
-                            st.warning("⚠️ Fraudulent Transactions Found!")
+                            st.warning("Fraudulent Transactions Found!")
                             st.dataframe(fraud_df.style.format({"Fraud Probability": "{:.2%}"}))
                         else:
                             st.info("No fraudulent transactions detected.")
