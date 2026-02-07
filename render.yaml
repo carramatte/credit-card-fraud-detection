@@ -23,7 +23,4 @@ services:
       - key: PYTHON_VERSION
         value: 3.9.13
       - key: API_URL
-        fromService:
-          type: web
-          name: fraud-detection-api
-          property: url
+        value: https://fraud-detection-api.onrender.com
