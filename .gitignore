@@ -45,7 +45,10 @@ data/processed/*.csv
 *.csv
 
 # Models
-models/*.pkl
+# models/*.pkl
+# Allow committing models as they are < 100MB and needed for deployment without retraining
+!models/random_forest_model.pkl
+!models/scaler.pkl
 # Ignore large models
 
 # Logs

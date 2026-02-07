@@ -1,0 +1,29 @@
+services:
+  # API Service
+  - type: web
+    name: fraud-detection-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.13
+
+  # Dashboard Service
+  - type: web
+    name: fraud-detection-dashboard
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run dashboard/app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.13
+      - key: API_URL
+        fromService:
+          type: web
+          name: fraud-detection-api
+          property: url

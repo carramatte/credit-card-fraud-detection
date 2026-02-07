@@ -10,7 +10,9 @@ st.markdown("Upload a CSV file containing transaction data to detect fraudulent 
 
 # Sidebar
 st.sidebar.header("Configuration")
-api_url = st.sidebar.text_input("API URL", "http://127.0.0.1:8000")
+import os
+default_api_url = os.environ.get("API_URL", "http://127.0.0.1:8000")
+api_url = st.sidebar.text_input("API URL", default_api_url)
 
 # File Uploader
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
