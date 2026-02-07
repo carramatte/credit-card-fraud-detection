@@ -10,3 +10,4 @@ uvicorn
 kaggle
 imbalanced-learn
 requests
+joblib
