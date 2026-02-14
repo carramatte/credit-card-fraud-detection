@@ -22,5 +22,3 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.9.13
-      - key: API_URL
-        value: https://fraud-detection-api-zchp.onrender.com
